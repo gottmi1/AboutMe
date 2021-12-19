@@ -43,6 +43,7 @@ const $box = document.querySelectorAll('.box');
       $list[0].classList.remove('menu-txt');
     })
 
+    // --------------------- 메뉴 클릭 했을 때 변하는 동작
 
     const $mainTxt = document.querySelectorAll('#main>img');
     window.addEventListener('load',() => {
@@ -55,14 +56,37 @@ const $box = document.querySelectorAll('.box');
     setInterval(() => {
       $mainTxt[3].classList.replace('opa-0','opa-1');
       $mainTxt[4].classList.replace('opa-0','opa-1');
-    }, 3700);
+    }, 3300);
     })
 
+    // 메인 글자 사진 차례대로 나오는 동작
 
+    const $toTop = document.querySelector('#toTop');
     const windowHeight = window.innerHeight;
     let heightNum = 0;
 
+
+    $toTop.addEventListener('click', () => {
+      scrollTo({
+        top: 0,
+        behavior: "smooth",
+      })
+    })
+
+    //toTop버튼 클릭이벤트
+
     window.addEventListener('wheel', (e) => {
+      
+      console.log(scrollY);
+      if(scrollY >= 500) {
+        $toTop.classList.replace('opa-0','opa-1');
+      } else {
+        $toTop.classList.replace('opa-1','opa-0');
+      }
+
+      // toTop 버튼 나오고 들어가게 하는 동작
+
+
       let del = e.deltaY;
       console.log(del);
       if ( $list[0].classList.contains('menu-txt')) {
@@ -105,3 +129,4 @@ const $box = document.querySelectorAll('.box');
         }
       }
     })
+    //  스크롤로 메뉴 바꾸는 효과주는 동작
