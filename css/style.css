@@ -63,6 +63,18 @@ header{
   position: absolute;
   color: white;
 }
+
+#scroll-down{
+  position: fixed;
+  display: block;
+  width: 5%;
+  height: auto;
+  left: 50%;
+  bottom: 10%;
+  transform: translateX(-50%);
+  transition: 800ms;
+  z-index: 5;
+}
 #about {
   background: linear-gradient(blanchedalmond, rgb(241, 255, 192));
 }

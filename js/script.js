@@ -61,6 +61,23 @@ const $box = document.querySelectorAll('.box');
 
     // 메인 글자 사진 차례대로 나오는 동작
 
+    const $scrollDown = document.querySelector("#scroll-down");
+    console.log($scrollDown);
+      const downImg = setInterval(() => {
+        if($scrollDown.classList.contains('opa-0')) {
+        $scrollDown.classList.remove('opa-0');
+        $scrollDown.classList.add('opa-1');
+        } else {
+          $scrollDown.classList.remove('opa-1');
+          $scrollDown.classList.add('opa-0');
+        }
+    }, 1500);
+
+      
+
+
+    //  스크롤 아이콘 반짝이기
+
     const $toTop = document.querySelector('#toTop');
     const windowHeight = window.innerHeight;
     let heightNum = 0;
@@ -80,11 +97,13 @@ const $box = document.querySelectorAll('.box');
       console.log(scrollY);
       if(scrollY >= 500) {
         $toTop.classList.replace('opa-0','opa-1');
+        $scrollDown.classList.replace('opa-1','opa-0');
+        clearInterval(downImg);
       } else {
         $toTop.classList.replace('opa-1','opa-0');
       }
 
-      // toTop 버튼 나오고 들어가게 하는 동작
+      // toTop 버튼과 스크롤 다운이미지를 나오고 들어가게 하는 동작
 
 
       let del = e.deltaY;
