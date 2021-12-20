@@ -89,6 +89,13 @@ align-items: center;}
   transform: translateX(-50%);
   font-size: 3em;
 }
+#click{
+  position: absolute;
+  left: 50vw;
+  transform: translateX(-50%);
+  top: 40vh;
+  transition: 500ms;
+}
 
 
 #about>h1{

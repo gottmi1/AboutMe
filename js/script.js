@@ -75,8 +75,18 @@ const $box = document.querySelectorAll('.box');
 
       
 
-
     //  스크롤 아이콘 반짝이기
+
+    const $click = document.querySelector('#click');
+    setInterval(() => {
+      if($click.classList.contains('opa-0')) {
+        $click.classList.replace('opa-0','opa-1');
+      } else {
+        $click.classList.replace('opa-1','opa-0');
+      }
+    }, 700);
+
+    // click!!
 
     const $toTop = document.querySelector('#toTop');
     const windowHeight = window.innerHeight;
