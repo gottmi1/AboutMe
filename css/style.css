@@ -1,40 +1,70 @@
-*{
+* {
   padding: 0;
   margin: 0;
   box-sizing: border-box;
 }
-ul,li{list-style: none;}
 
-body{
+ul,
+li {
+  list-style: none;
+}
+
+body {
   overflow-x: hidden;
 }
-a{
+
+a {
   text-decoration: none;
   color: #333;
 }
 
-.po-re{position: relative;}
-.hei-0{height: 0;}
-.hei-85{height: 85vh;}
-.menu-txt{
-  font-weight: 500;
-  color: #E98F8F;
-  background-color: rgba(155, 155, 155, .2);
+.po-re {
+  position: relative;
 }
-.opa-0{opacity: 0;}
-.opa-1{opacity: 1;}
 
-.over-hid{
+.hei-0 {
+  height: 0;
+}
+
+.hei-85 {
+  height: 85vh;
+}
+
+.menu-txt {
+  font-weight: 700;
+  transform: scale(1.1);
+  text-transform: capitalize;
+}
+
+.opa-0 {
+  opacity: 0;
+}
+
+.opa-70 {
+  opacity: 0.7;
+}
+
+.opa-1 {
+  opacity: 1;
+}
+
+.d-none {
+  display: none;
+}
+
+.over-hid {
   overflow: hidden;
 }
 
-header{
+header {
   width: 100vw;
   height: 15vh;
-  background-color: beige;
+  background-color: rgba(240, 240, 240, 0.5);
+  transition: 1500ms;
+  opacity: 0;
 }
 
-#logo{
+#logo {
   float: left;
   display: flex;
   justify-content: center;
@@ -43,28 +73,68 @@ header{
   height: 15vh;
 }
 
-#menu{
+#menu {
   display: flex;
   width: 30vw;
   height: 15vh;
   justify-content: center;
   align-items: center;
   margin-left: 60vw;
+  transition: 400ms;
 }
-#menu>li{
+
+#menu>li {
   width: 25%;
   text-align: center;
   transition: 200ms;
   cursor: pointer;
 }
-.box{width: 100vw; transition: 200ms; overflow: hidden; position: relative;}
-#main {background: url(../img/grass-315184.jpg) center center no-repeat;}
-#main>p{
-  position: absolute;
-  color: white;
+
+.box {
+  width: 100vw;
+  transition: 200ms;
+  overflow: hidden;
+  position: relative;
 }
 
-#scroll-down{
+#main {
+  transition: 600ms;
+}
+
+#color-box {
+  position: absolute;
+  border-radius: 25%;
+  top: -35%;
+  left: -50%;
+  width: 0%;
+  height: 300%;
+  z-index: 1;
+  transition: 1200ms;
+  transform: rotate(45deg);
+  background-color: black;
+}
+
+#main span {
+  font-size: 50px;
+  display: inline-block;
+  position: absolute;
+  transition: 200ms;
+  z-index: 5;
+}
+
+#main span:nth-child(1) {
+  top: 20vh;
+  left: 18vw;
+  transform: scale(3);
+}
+
+#main span:nth-child(2) {
+  top: 53vh;
+  right: 20vw;
+  opacity: 0;
+}
+
+#scroll-down {
   position: fixed;
   display: block;
   width: 5%;
@@ -75,21 +145,28 @@ header{
   transition: 800ms;
   z-index: 5;
 }
+
 #about {
-  background: linear-gradient(blanchedalmond, rgb(241, 255, 192));
+  transition: 600ms;
 }
-#skills {background:url(../skill/Untitled-1.png);
-display: flex;
-justify-content: center;
-align-items: center;}
-#skills>h1{
+
+#skills {
+  background: url(../skill/Untitled-1.png);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: 600ms;
+}
+
+#skills>h1 {
   position: absolute;
   top: 10vh;
   left: 50%;
   transform: translateX(-50%);
   font-size: 3em;
 }
-#click{
+
+#click {
   position: absolute;
   left: 50vw;
   transform: translateX(-50%);
@@ -98,16 +175,17 @@ align-items: center;}
 }
 
 
-#about>h1{
+#about>h1 {
   transform: rotateX(0deg);
   display: block;
   transition: 1s;
 }
-#about>h1:hover{
+
+#about>h1:hover {
   transform: rotateZ(-30deg);
 }
 
-#about-wrap{
+#about-wrap {
   position: relative;
   left: 10vw;
   top: 15vh;
@@ -116,15 +194,16 @@ align-items: center;}
   height: 60vh;
 }
 
-#picture{
+#picture {
   position: absolute;
   width: 18vw;
   height: 40vh;
   top: 10vh;
   left: 5vw;
-  background-color: white;
+  border: 1px solid black;
 }
-#textbox{
+
+#textbox {
   top: 5vh;
   height: 50vh;
   width: 40vw;
@@ -136,49 +215,40 @@ align-items: center;}
   align-items: center;
   flex-direction: column;
 }
-#textbox>p{
+
+#textbox>p {
   font-size: 1rem;
   text-align: center;
   padding: 30px;
   line-height: 1.3rem;
 }
 
-#project{
+#project {
   width: 100vw;
   height: auto;
   background: linear-gradient(blanchedalmond, rgb(241, 255, 192));
   padding: 8vw;
+  min-height: 80vh;
+  transition: 600ms;
+
 }
 
-#project>h1{
+#project>h1 {
   position: absolute;
   top: 13.2vh;
   left: 20vw;
   color: black;
 }
-#con{
+
+#con {
   width: 84vw;
-  height: 260vh;
+  height: 100vh;
   background-color: white;
   padding: 10vw;
   margin-bottom: 10vh;
 }
-#con>img{
-  width: 100%;
-  height: 100%;
-}
 
-#con2{
-  width: 100%;
-  height: auto;
-  background-color: white;
-}
-#con2>img{
-  width: 100%;
-  height: 40%;
-  margin-bottom: 5vh;
-}
-#toTop{
+#toTop {
   position: fixed;
   bottom: 5vh;
   right: 4vw;
