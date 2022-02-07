@@ -1,3 +1,16 @@
+@font-face {
+  font-family: 'CBNUJIKJI';
+  src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2202@1.0/CBNUJIKJI.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'OTWelcomeRA';
+  src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2110@1.0/OTWelcomeRA.woff2') format('woff2');
+  font-weight: normal;
+  font-style: normal;
+}
+
 * {
   padding: 0;
   margin: 0;
@@ -98,20 +111,20 @@ header {
 }
 
 #main {
-  transition: 600ms;
+  transition: 450ms;
 }
 
 #color-box {
   position: absolute;
   border-radius: 25%;
-  top: -35%;
-  left: -50%;
+  top: -55%;
+  left: -100%;
   width: 0%;
-  height: 300%;
+  height: 500%;
   z-index: 1;
   transition: 1200ms;
-  transform: rotate(45deg);
-  background-color: black;
+  transform: rotate(35deg);
+  background-color: #000;
 }
 
 #main span {
@@ -120,6 +133,7 @@ header {
   position: absolute;
   transition: 200ms;
   z-index: 5;
+  font-family: 'CBNUJIKJI';
 }
 
 #main span:nth-child(1) {
@@ -147,7 +161,7 @@ header {
 }
 
 #about {
-  transition: 600ms;
+  transition: 450ms;
 }
 
 #skills {
@@ -155,7 +169,7 @@ header {
   display: flex;
   justify-content: center;
   align-items: center;
-  transition: 600ms;
+  transition: 450ms;
 }
 
 #skills>h1 {
@@ -179,6 +193,7 @@ header {
   transform: rotateX(0deg);
   display: block;
   transition: 1s;
+  font-family: 'OTWelcomeRA';
 }
 
 #about>h1:hover {
@@ -220,17 +235,16 @@ header {
   font-size: 1rem;
   text-align: center;
   padding: 30px;
-  line-height: 1.3rem;
+  line-height: 1.7rem;
+  letter-spacing: 0.1rem;
+  font-family: 'OTWelcomeRA';
 }
 
 #project {
   width: 100vw;
   height: auto;
-  background: linear-gradient(blanchedalmond, rgb(241, 255, 192));
-  padding: 8vw;
   min-height: 80vh;
-  transition: 600ms;
-
+  transition: 450ms;
 }
 
 #project>h1 {
@@ -241,11 +255,96 @@ header {
 }
 
 #con {
-  width: 84vw;
-  height: 100vh;
-  background-color: white;
-  padding: 10vw;
+  width: 100vw;
+  height: 85vh;
   margin-bottom: 10vh;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+}
+
+#con #project-box{
+  width: 19%;
+  height: 75%;
+  background-color: white;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  box-shadow: 10px 6px 20px rgba(1,1,1,0.3);
+  overflow: hidden;
+  position: relative;
+}
+
+#con #project-title{
+  height: 7%;
+  font-size: 22px;
+}
+#con #text-box{
+  height: 20%;
+  width: 80%;
+  text-align: center;
+}
+
+#blank-box{
+  height: 2.5%;
+}
+
+#con #img-box{
+  width: 100%;
+  height: 65%;
+  background-color: aqua;
+  justify-self: start;
+}
+
+#con #toy-img-box{
+  width: 400%;
+  height: 65%;
+  background: linear-gradient(to right,blue,red);
+  justify-self: start;
+  align-self: flex-start;
+  transition: 500ms;
+  display: flex;
+  overflow: hidden;
+
+}
+
+#con #toy-img-box a{
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+}
+
+#con #toy-img-box img{
+  height: 100%;
+  width: 100%;
+  
+}
+
+#con #img-box img{
+  width: 100%;
+  height: 100%;
+}
+
+#con #toy-toggle{
+  width: 50%;
+  height: 5%;
+  display: flex;
+  justify-content: space-evenly;
+  position: absolute;
+  top: 58%;
+}
+#toy-toggle div{
+  width: 24px;
+  height: 24px;
+  border-radius: 50%;
+  border: 12px solid #333;
+  cursor: pointer;
+}
+
+#toy-toggle .toggle-on{
+  border: 6px solid #333;
+  background-color: white;
 }
 
 #toTop {
