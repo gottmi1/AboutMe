@@ -162,6 +162,7 @@ header {
 
 #about {
   transition: 450ms;
+  background-color: rgba(231, 221, 210, 0.4);
 }
 
 #skills {
@@ -204,7 +205,7 @@ header {
   position: relative;
   left: 10vw;
   top: 15vh;
-  width: 80vw;
+  width: 90vw;
   /* border: 1px solid black; */
   height: 60vh;
 }
@@ -215,7 +216,6 @@ header {
   height: 40vh;
   top: 10vh;
   left: 5vw;
-  border: 1px solid black;
 }
 
 #picture img {
@@ -226,7 +226,7 @@ header {
 #textbox {
   top: 5vh;
   height: 50vh;
-  width: 40vw;
+  width: 50vw;
   /* border: 1px solid black; */
   position: absolute;
   right: 8vw;
@@ -234,6 +234,7 @@ header {
   justify-content: center;
   align-items: center;
   flex-direction: column;
+  background-color: rgba(255,255,255,.7);
 }
 
 #textbox>p {
@@ -250,6 +251,8 @@ header {
   height: auto;
   min-height: 80vh;
   transition: 450ms;
+  background-color: rgba(231, 221, 210, 0.3);
+
 }
 
 #project>h1 {
